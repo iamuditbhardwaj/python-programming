@@ -1,0 +1,22 @@
+rownum = int(input("Enter number of rows: "))
+
+if rownum%2 == 0:
+    print("Please enter an odd number !!!")
+else:
+    rownum = (rownum+1)//2
+
+    for i in range(rownum):
+        for j in range(rownum-i-1):
+            print(" ",end=" ")
+        for k in range((2*i)+1):
+            print("*",end=" ")
+        print()
+
+    rownum = rownum - 1
+
+    for i in range(rownum):
+        for j in range(i+1):
+            print(" ",end=" ")
+        for k in range(2*(rownum-i)-1):
+            print("*",end=" ")
+        print()
